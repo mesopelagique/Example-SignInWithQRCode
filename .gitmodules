@@ -1,0 +1,3 @@
+[submodule "Resources/mobile/form/login/signinwithqrcode"]
+	path = Resources/mobile/form/login/signinwithqrcode
+	url = https://github.com/mesopelagique/form-login-SignInWithQRCode.git
