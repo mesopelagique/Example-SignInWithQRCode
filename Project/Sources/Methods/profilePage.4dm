@@ -1,0 +1,20 @@
+//%attributes = {}
+$html:="<!DOCTYPE html><html lang=\"en\">"
+$html:=$html+"<head><title>profile</title>"
+$html:=$html+"<script src=\"qrcode.min.js\"></script>"
+$html:=$html+"<script src=\"showQRCode.js\"></script>"
+$html:=$html+"<link href=\"profile.css\" rel=\"stylesheet\">"
+$html:=$html+"</head>\n"
+$html:=$html+"<body>\n"
+$html:=$html+"<div class=\"login-box\"><h2>Profile</h2>"
+$html:=$html+"<div class=\"user-box\">"
+$html:=$html+"<label>Welcome "+String:C10(Session:C1714.storage.data.email)+"</label>"
+$html:=$html+"</div>\n"
+$html:=$html+"<div class=\"input-submit\"><button type=\"button\" onclick=\"logout()\">Logout</button></div><br/><br/><br/><br/>"
+$html:=$html+"<div class=\"input-submit\"><button type=\"button\" onclick=\"showQRCode()\">Show QR Code to connect mobile app</button></div>"
+$html:=$html+"<br/><br/><br/><br/><br/><div align=\"center\" id=\"qrcode\"></div>"
+$html:=$html+"</div>\n"
+$html:=$html+"</body>"
+$html:=$html+"</html>"
+
+WEB SEND TEXT:C677($html)

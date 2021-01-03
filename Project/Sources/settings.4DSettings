@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><preferences stamp="3">
+	<com.4d>
+		<web>
+			<standalone_server>
+				<configuration https_port_number="8443" port_number="8080" publish_at_startup="true"/>
+				<webservices>
+					<server name="A_WebService"/>
+				</webservices>
+			</standalone_server>
+		</web>
+		<server>
+			<network>
+				<options publication_name="SignInWithQRCode"/>
+			</network>
+		</server>
+		<sql>
+			<publication port_number="19812"/>
+		</sql>
+	</com.4d>
+</preferences>
