@@ -2,5 +2,46 @@
 <!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
 <base name="SignInWithQRCode" uuid="58E905506F3A471485315D3D90DF2BA6" collation_locale="en-gb">
 	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Table_1" uuid="B39AEA4AA996478B837FB1596611167C" id="1">
+		<field name="ID" uuid="96F27E8765ED42DD8431E4BE803D9EF1" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Field_2" uuid="7FFF2B854BE241E5A8BCD09565C0CA4A" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="Field_3" uuid="838445A389F64222B019F88AF0FCD270" type="10" limiting_length="255" never_null="true" id="3"/>
+		<field name="__GlobalStamp" uuid="F0A0A25A25DD40529C9EAD12ADD6E25A" type="5" id="4"/>
+		<primary_key field_name="ID" field_uuid="96F27E8765ED42DD8431E4BE803D9EF1"/>
+		<table_extra>
+			<editor_table_info displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="40" top="40" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="__DeletedRecords" uuid="05848568799D4A9294335136724661FD" id="2" leave_tag_on_delete="true" prevent_journaling="true">
+		<field name="ID" uuid="FB4F97610FC64F5B846860C4ED8D5628" type="5" unique="true" autosequence="true" id="1"/>
+		<field name="__Stamp" uuid="A938FF9F133F47959BC36EA617799C4A" type="5" id="2"/>
+		<field name="__TableNumber" uuid="F1619C03618A4DADA0E39481544693F0" type="4" id="3"/>
+		<field name="__TableName" uuid="8663B30CF1714E5A94B67996711048B9" type="10" limiting_length="255" id="4"/>
+		<field name="__PrimaryKey" uuid="69B7B5FF2B8D4052B63EC0F2C2A3E8FF" type="10" limiting_length="255" id="5"/>
+		<primary_key field_name="ID" field_uuid="FB4F97610FC64F5B846860C4ED8D5628"/>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="7ECCDDEFE62A488CAA7ECCFE5D623D1C" type="7">
+		<field_ref uuid="96F27E8765ED42DD8431E4BE803D9EF1" name="ID">
+			<table_ref uuid="B39AEA4AA996478B837FB1596611167C" name="Table_1"/>
+		</field_ref>
+	</index>
+	<index kind="regular" name="__DeletedRecords__Stamp" uuid="C8D2A217C36E42E4A64DC20FC0FCCA7F" type="7">
+		<field_ref uuid="A938FF9F133F47959BC36EA617799C4A" name="__Stamp">
+			<table_ref uuid="05848568799D4A9294335136724661FD" name="__DeletedRecords"/>
+		</field_ref>
+	</index>
+	<index kind="regular" name="__GlobalStamp_table1" uuid="F9B1337056F546AFB62B0EC6882EEFDC" type="7">
+		<field_ref uuid="F0A0A25A25DD40529C9EAD12ADD6E25A" name="__GlobalStamp">
+			<table_ref uuid="B39AEA4AA996478B837FB1596611167C" name="Table_1"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" name="__DeletedRecordsID" uuid="FA4FBBE6016B4C8EB80B93558CEDC12B" type="7">
+		<field_ref uuid="FB4F97610FC64F5B846860C4ED8D5628" name="ID">
+			<table_ref uuid="05848568799D4A9294335136724661FD" name="__DeletedRecords"/>
+		</field_ref>
+	</index>
 	<base_extra __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0"/>
 </base>
