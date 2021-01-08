@@ -15,6 +15,10 @@ Example base for [login form form-login-SignInWithQRCode](https://github.com/mes
 
 * onMobileAuth: check mobile session, called by database method `on mobile app authentication`
 
+the code contain example using server memory to keep last token, crypted tokens are better
+
+> // TODO add code with cypted token
+
 ## login page
 
 ![login](login.png)
