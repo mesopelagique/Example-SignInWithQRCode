@@ -19,10 +19,20 @@ the code contain example using server memory to keep last token, crypted tokens 
 
 > // TODO add code with cypted token
 
-## login page
+## pages of website
+
+### login page
+
+sample of login page in your website, you login with email, password, etc...
 
 ![login](login.png)
 
-## profile page
+The user connect and he could access secured resources
+
+### profile page
   
+the user could display a profile page (a setting page maybe)
+
 ![profile](profile.png)
+
+He could find a button to generate the qr code to authenticate mobile app with same account
