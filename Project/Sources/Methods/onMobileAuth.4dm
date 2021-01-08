@@ -8,6 +8,8 @@ Case of
 	: (Length:C16(String:C10($auth.userInfo.token))=0)
 		$result.statusText:="No token provided"
 	Else 
+	        // here a code that use token un memory
+		// an alternative is to decode/decrypt the token and check the content, no need to keep it in memories!
 		Use (Storage:C1525.tokens)
 			$expected:=Storage:C1525.tokens[$auth.email]
 			If ($expected#Null:C1517)
